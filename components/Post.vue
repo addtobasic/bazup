@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div>
-      <!-- <input type="file" id="imgfile" multiple> -->
-
-    </div>
+    <!-- <input type="file" id="imgfile" multiple> -->
     <v-card dark>
       <div id="contactMain">
         <h1 align="center" id="title">Bazらせたい作品を投稿！！</h1>
@@ -13,24 +10,23 @@
               <v-container>
                 <v-row>
                   <v-col cols="12">
-                  <v-file-input
-                    label="作品画像"
-                    multiple
-                    accept="image/png, image/jpeg"
-                    prepend-icon="mdi-image"
-                    @change="upload"
-                  >
-                    <template v-slot:selection="{ text }">
-                      <v-chip
-                        small
-                        label
-                        color="primary"
-                      >
-                        {{ text }}
-                      </v-chip>
-                    </template>
-                  </v-file-input>
-
+                    <v-file-input
+                      label="作品画像"
+                      multiple
+                      accept="image/png, image/jpeg"
+                      prepend-icon="mdi-image"
+                      @change="upload"
+                    >
+                      <template v-slot:selection="{ text }">
+                        <v-chip
+                          small
+                          label
+                          color="primary"
+                        >
+                          {{ text }}
+                        </v-chip>
+                      </template>
+                    </v-file-input>
                   </v-col>
                 </v-row>
                 <v-row>
@@ -48,7 +44,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn  v-on:click="submit" color="primary">Send</v-btn>
+              <v-btn  v-on:click="submit" color="primary" to='/view'>Send</v-btn>
             </v-card-actions>
           </v-card>
         </v-container>

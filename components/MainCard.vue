@@ -2,6 +2,7 @@
   <v-card
     class="mx-auto"
     light
+    id="mainCard"
   >
     <v-toolbar
       color="indigo"
@@ -17,13 +18,13 @@
           :cols="item.flex"
         >
           <v-card>
-            <v-img
-              :src="item.src"
-              class="white--text align-end"
-              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-              height="200px"
-            >
-            </v-img>
+            <div align="center">
+              <v-img
+                :src="item.src"
+                id="inputImg"
+              >
+              </v-img>
+            </div>
           </v-card>
           <v-card
             class="mx-auto"
@@ -50,7 +51,7 @@
                 </v-row>
               </v-list-item>
             </v-card-actions>
-            <v-card-text class="subtitle-1 font-weight-bold">
+            <v-card-text class="headline font-weight-bold">
               {{description}}
             </v-card-text>
           </v-card>
@@ -115,3 +116,12 @@
     }
   }
 </script>
+<style>
+  #mainCard{
+    width:600px
+  }
+
+  #inputImg{
+    width: 200px;
+  }
+</style>

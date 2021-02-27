@@ -1,59 +1,63 @@
 <template>
   <div>
-  <v-card
-    class="mx-auto"
-    light
-    v-for="(account,i) in accounts"
-    :key="i"
-  >
-    <v-timeline
-      align-top
-      dense
+    <div
+        v-for="(account,i) in accounts"
+        :key="i"
     >
-      <v-timeline-item
+      <v-card
+        class="mx-auto"
+        light
         v-if="account.showFlag"
-        small
-        right
       >
-        <v-card
-          v-if="account.showFlag"
-          class="mx-auto"
-          color="#26c6da"
-          dark
+        <v-timeline
+          align-top
+          dense
         >
-          <v-card-actions>
-            <v-list-item class="grow">
-              <v-list-item-avatar color="grey darken-3">
-                <v-img
-                  class="elevation-6"
-                  :src="account.src"
-                ></v-img>
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title class="font-weight-bold">{{account.name}}</v-list-item-title>
-              </v-list-item-content>
-              <v-row
-                align="center"
-                justify="end"
-              >
-                <v-btn icon>
-                  <v-icon class="mr-1">mdi-heart</v-icon>
-                </v-btn>
-                <span class="subheading mr-2">{{account.likeNum}}</span>
-                <v-btn icon>
-                  <v-icon class="mr-1">mdi-share-variant</v-icon>
-                </v-btn>
-                <span class="subheading">{{account.shareNum}}</span>
-              </v-row>
-            </v-list-item>
-          </v-card-actions>
-          <v-card-text class="headline font-weight-bold">
-            {{account.comment}}
-          </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
-  </v-card>
+          <v-timeline-item
+            v-if="account.showFlag"
+            small
+            right
+          >
+            <v-card
+              v-if="account.showFlag"
+              class="mx-auto"
+              color="#26c6da"
+              dark
+            >
+              <v-card-actions>
+                <v-list-item class="grow">
+                  <v-list-item-avatar color="grey darken-3">
+                    <v-img
+                      class="elevation-6"
+                      :src="account.src"
+                    ></v-img>
+                  </v-list-item-avatar>
+                  <v-list-item-content>
+                    <v-list-item-title class="font-weight-bold">{{account.name}}</v-list-item-title>
+                  </v-list-item-content>
+                  <v-row
+                    align="center"
+                    justify="end"
+                  >
+                    <v-btn icon>
+                      <v-icon class="mr-1">mdi-heart</v-icon>
+                    </v-btn>
+                    <span class="subheading mr-2">{{account.likeNum}}</span>
+                    <v-btn icon>
+                      <v-icon class="mr-1">mdi-share-variant</v-icon>
+                    </v-btn>
+                    <span class="subheading">{{account.shareNum}}</span>
+                  </v-row>
+                </v-list-item>
+              </v-card-actions>
+              <v-card-text class="headline font-weight-bold">
+                {{account.comment}}
+              </v-card-text>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -319,7 +323,6 @@
         this.inNum++
         if(this.inNum < 31) {
           this.accounts[this.inNum].showFlag = true
-          // console.log("this.inNum:"+this.inNum)
         }
       }, 2500);
     }
