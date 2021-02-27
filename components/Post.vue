@@ -44,7 +44,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn  v-on:click="submit" color="primary" to='/view'>Send</v-btn>
+              <v-btn  v-on:click="submit" color="primary">Send</v-btn>
             </v-card-actions>
           </v-card>
         </v-container>
@@ -78,6 +78,7 @@
           user_name: this.author,
           description: this.description
         });
+        document.location.href = "view/";
       },
 
       upload: function (files) {

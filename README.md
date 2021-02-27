@@ -1,20 +1,34 @@
 # bazup
 
-## Build Setup
+jig.jpのインターンで僕のチームが作ったアプリです
+
+# Requirement
+ 
+* npm
+* deno
+
+# Setup
 
 ```bash
-# install dependencies
+$ git clone https://github.com/Genshi0916/bazup.git
+$ cd bazup
 $ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# Start
+
+```bash
+# Start the development server.
+$ npm run dev
+
+# Start the API server.
+$ npm run server
+```
+
+# DEMO
+
+1枚目の画像の様にバズらせたい投稿内容を入力しSENDを押すと2枚目の画像の様にバズらせてくれます
+
+![](demo1.png "demo1")
+
+![](demo2.png "demo2")
