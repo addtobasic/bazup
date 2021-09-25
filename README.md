@@ -10,7 +10,7 @@ jig.jpのインターンで僕のチームが作ったアプリです
 # Setup
 
 ```bash
-$ git clone https://github.com/Genshi0916/bazup.git
+$ git clone https://github.com/addtobasic/bazup.git
 $ cd bazup
 $ npm install
 ```
